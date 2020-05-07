@@ -11,7 +11,7 @@ collections:
   - name: "national-parks"
     label: "National Parks"
     label_singular: "National Park"
-    folder: "public/parks"
+    folder: "src/parks"
     format: 'json'
     create: true
     editor:
