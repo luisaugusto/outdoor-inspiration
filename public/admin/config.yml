@@ -1,18 +1,28 @@
 backend:
   name: git-gateway
-  local_server: true
-media_folder: "public/images/" # Media files will be stored in the repo under images/uploads
+media_folder: "public/images/"
+public_folder: "/images/"
+site_url: https://outdoor-inspiration.netlify.app
+display_url: https://outdoor-inspiration.netlify.app
+slug:
+  encoding: "ascii"
+  clean_accents: true
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "_posts/blog" # The path to the folder where the documents are stored
+  - name: "national-parks"
+    label: "National Parks"
+    label_singular: "National Park"
+    folder: "public/parks"
     format: 'json'
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    create: true
+    editor:
+      preview: false
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Title", name: "title", widget: "string", required: true}
+      - {label: "Location", name: "location", widget: "string", required: true}
+      - {label: "Description", name: "description", widget: "text", required: true}
+      - label: "NPS Website URL"
+        name: "nps-url"
+        widget: "string"
+        required: true
+        pattern: ['/((([A-Za-z]{3,9}:(?:\/\/)?)(?:[\-;:&=\+\$,\w]+@)?[A-Za-z0-9\.\-]+|(?:www\.|[\-;:&=\+\$,\w]+@)[A-Za-z0-9\.\-]+)((?:\/[\+~%\/\.\w\-_]*)?\??(?:[\-\+=&;%@\.\w_]*)#?(?:[\.\!\/\\\w]*))?)/', "Must be a valid URL"]
+
