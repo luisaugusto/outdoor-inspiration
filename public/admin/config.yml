@@ -25,4 +25,5 @@ collections:
         widget: "string"
         required: true
         pattern: ['(http(s)?:\/\/.)?(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)', "Must be a valid URL"]
+      - {label: "Flickr Gallery ID", name: "gallery-id", widget: "string", required: true}
 
