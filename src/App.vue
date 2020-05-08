@@ -24,6 +24,9 @@
 <script>
 export default {
   computed: {
+    data: () => ({
+      delayRequests: false //Set to true if you want to limit requests to Flickr to 1 per hour
+    }),
     park() {
       return this.$store.state.activePark;
     },
@@ -44,15 +47,16 @@ export default {
     console.info(
       "Want to contribute to this project? visit https://github.com/luisaugusto/outdoor-inspiration"
     );
+
     this.$store.dispatch("getParks").then(() => {
       const parkExp = localStorage.getItem("parkExp");
-      //+ 1000 * 60 * 60
-      if (Date.now() < parseInt(parkExp)) {
-        console.log("yes");
+      if (
+        this.delayRequests &&
+        Date.now() < parseInt(parkExp) + 1000 * 60 * 6
+      ) {
         const parkStorage = localStorage.getItem("park");
         this.$store.commit("setPark", JSON.parse(parkStorage));
       } else {
-        console.log("no");
         this.$store.dispatch("getActivePark").then(() => {
           localStorage.setItem("park", JSON.stringify(this.park));
           localStorage.setItem("parkExp", String(Date.now()));
