@@ -6,6 +6,8 @@ A chrome tab extension that displays photos and descriptions of US National Park
 
 ![](screenshot.jpg)
 
+Photos from the application are fetched from my galleries in [Flickr](https://www.flickr.com/photos/188326816@N04/galleries), and information about the park is pulled from the [NPS website](https://www.nps.gov/index.htm).
+
 ###### Please consider supporting my work and other projects:
 
 [![Plant a Tree](https://img.shields.io/badge/Plant%20a%20Tree-%F0%9F%8C%B3-green)](https://offset.earth/luisaugusto)
