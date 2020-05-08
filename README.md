@@ -1,6 +1,6 @@
 # Outdoor Inspiration
 
-A chrome tab extension that displays pictures and descriptions of US National Parks
+A chrome tab extension that displays photos and descriptions of US National Parks
 
 > It is not yet finished as a chrome extension, but it can be previewed [here](https://outdoor-inspiration.netlify.app/) as well as run locally.
 
