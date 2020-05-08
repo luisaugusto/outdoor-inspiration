@@ -15,7 +15,11 @@
         <a :href="flickrUrl"><i class="fab fa-flickr"></i></a>
       </div>
     </div>
-    <section class="description">{{ park.description }}{{ park.date }}</section>
+    <section class="description">
+      {{ park.description }}<br /><br /><span class="est"
+        >Est. {{ park.date }}</span
+      >
+    </section>
   </div>
 </template>
 
@@ -66,7 +70,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:wght@300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap");
 body {
   margin: 0;
   background: #333;
@@ -174,5 +178,10 @@ body {
   max-width: 100vw;
   font-weight: 300;
   letter-spacing: 0.5px;
+
+  .est {
+    font-size: 0.8em;
+    font-style: italic;
+  }
 }
 </style>
