@@ -167,6 +167,7 @@ body {
   .location {
     font-weight: bold;
     font-size: 24px;
+    margin-top: 15px;
 
     @media (max-width: 767px) {
       font-size: 18px;
