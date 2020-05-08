@@ -19,6 +19,11 @@ collections:
     fields: # The fields for each document, usually in front matter
       - {label: "Title", name: "title", widget: "string", required: true}
       - {label: "Location", name: "location", widget: "string", required: true}
+      - label: "Date Established"
+        name: "date"
+        widget: "date"
+        required: true
+        format: 'MMM Do, YYYY'
       - {label: "Description", name: "description", widget: "text", required: true}
       - label: "NPS Website URL"
         name: "nps-url"

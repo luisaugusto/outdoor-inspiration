@@ -15,9 +15,7 @@
         <a :href="flickrUrl"><i class="fab fa-flickr"></i></a>
       </div>
     </div>
-    <section class="description">
-      {{ park.description }}
-    </section>
+    <section class="description">{{ park.description }}{{ park.date }}</section>
   </div>
 </template>
 
