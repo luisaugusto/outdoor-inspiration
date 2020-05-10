@@ -81,7 +81,7 @@ body {
 
 .page {
   font-family: "Open Sans", sans-serif;
-  font-size: 18px;
+  font-size: 20px;
   line-height: 1.3;
   display: flex;
   justify-content: space-between;
@@ -120,7 +120,7 @@ body {
 .description,
 .title-location,
 .icons {
-  transition: all 0.5s;
+  transition: opacity 0.5s, transform 0.5s;
   opacity: 0;
 
   .display & {
