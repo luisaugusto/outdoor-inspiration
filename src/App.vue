@@ -2,6 +2,8 @@
   <div id="app" :class="['page', { display: imgLoaded }]">
     <div class="background">
       <img :src="image" alt="" @load="imgLoaded = true" />
+
+      <div class="loading"></div>
     </div>
 
     <div class="info">
@@ -102,18 +104,67 @@ body {
   bottom: 0;
   right: 0;
   z-index: -1;
-  opacity: 0;
-  transition: opacity 0.5s;
-
-  .display & {
-    opacity: 0.8;
-  }
 
   img {
     width: 100%;
     height: 100%;
     display: block;
     object-fit: cover;
+
+    opacity: 0;
+    transition: opacity 0.5s;
+
+    .display & {
+      opacity: 0.8;
+    }
+  }
+
+  .loading {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s;
+
+    .display & {
+      opacity: 0;
+    }
+
+    &:before,
+    &:after {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 0;
+      height: 0;
+      animation: loading 1.2s linear infinite;
+      border: 2px solid white;
+      border-radius: 100%;
+
+      @keyframes loading {
+        0% {
+          height: 0;
+          width: 0;
+        }
+
+        80%,
+        100% {
+          height: 100px;
+          width: 100px;
+          opacity: 0;
+        }
+      }
+    }
+
+    &:after {
+      animation-delay: 0.2s;
+      border-width: 1px;
+    }
   }
 }
 

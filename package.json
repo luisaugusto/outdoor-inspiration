@@ -1,7 +1,7 @@
 {
   "name": "outdoor-inspiration",
   "description": "A chrome tab extension that displays pictures and descriptions of US National Parks",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",
