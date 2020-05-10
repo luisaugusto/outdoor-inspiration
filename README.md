@@ -2,7 +2,9 @@
 
 A chrome tab extension that displays photos and descriptions of US National Parks
 
-> It is not yet finished as a chrome extension, but it can be previewed [here](https://outdoor-inspiration.netlify.app/) as well as run locally.
+[Download for Google Chrome](https://chrome.google.com/webstore/detail/mjgkcdcikkpendiikknkdhanooeiohee/)
+
+> The page can also be previewed [here](https://outdoor-inspiration.netlify.app/) as well as run locally.
 
 ![](screenshot.jpg)
 
