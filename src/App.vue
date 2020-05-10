@@ -1,9 +1,8 @@
 <template>
-  <div id="app" class="page">
-    <div
-      :class="['background', { display: image }]"
-      :style="{ 'background-image': `url(${image})` }"
-    ></div>
+  <div id="app" :class="['page', { display: imgLoaded }]">
+    <div class="background">
+      <img :src="image" alt="" @load="imgLoaded = true" />
+    </div>
 
     <div class="info">
       <section class="title-location">
@@ -27,10 +26,11 @@
 
 <script>
 export default {
+  data: () => ({
+    delayRequests: false, //Set to true if you want to limit requests to Flickr to 1 per hour
+    imgLoaded: false
+  }),
   computed: {
-    data: () => ({
-      delayRequests: false //Set to true if you want to limit requests to Flickr to 1 per hour
-    }),
     park() {
       return this.$store.state.activePark;
     },
@@ -49,7 +49,7 @@ export default {
   },
   created() {
     console.info(
-      "Want to contribute to this project? visit https://github.com/luisaugusto/outdoor-inspiration"
+      "Want to contribute to this project? Visit https://github.com/luisaugusto/outdoor-inspiration"
     );
 
     this.$store.dispatch("getParks").then(() => {
@@ -75,7 +75,7 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap");
 body {
   margin: 0;
-  background: #333;
+  background: black;
   color: white;
 }
 
@@ -87,33 +87,44 @@ body {
   justify-content: space-between;
   flex-direction: column;
   height: 100vh;
-  text-shadow: 1px 1px 2px #333;
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.5),
-    transparent,
-    rgba(0, 0, 0, 0.2)
-  );
+  overflow: hidden;
+  text-shadow: 1px 1px 1px black;
 
   @media (max-width: 767px) {
     font-size: 16px;
   }
+}
 
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.5s;
-    background-position: center;
-    background-size: cover;
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
 
-    &.display {
-      opacity: 1;
-    }
+  .display & {
+    opacity: 0.8;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
+}
+
+.description,
+.title-location,
+.icons {
+  transition: all 0.5s;
+  opacity: 0;
+
+  .display & {
+    opacity: 1;
   }
 }
 
@@ -153,6 +164,14 @@ body {
   @media (max-width: 991px) {
     grid-template-columns: 1fr auto;
   }
+}
+
+.title-location {
+  transform: translateY(-100%);
+
+  .display & {
+    transform: translateY(0%);
+  }
 
   h1 {
     font: 300 60px "Open Sans Condensed", sans-serif;
@@ -181,6 +200,12 @@ body {
   max-width: 100vw;
   font-weight: 300;
   letter-spacing: 0.5px;
+
+  transform: translateY(100%);
+
+  .display & {
+    transform: translateY(0%);
+  }
 
   .est {
     font-size: 0.8em;
