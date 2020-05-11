@@ -249,10 +249,8 @@ body {
   letter-spacing: 0.5px;
   background: rgba(0, 0, 0, 0.6);
   margin: 30px;
-  border: 4px double rgba(255, 255, 255, 0.2);
-  outline: 15px solid rgba(0, 0, 0, 0.6);
   transform: translateY(100%);
-  padding: 15px;
+  padding: 30px;
 
   .display & {
     transform: translateY(0%);
