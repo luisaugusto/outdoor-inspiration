@@ -74,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&family=Open+Sans:ital,wght@0,400;0,700;1,300&display=swap");
 body {
   margin: 0;
   background: black;
@@ -83,7 +83,7 @@ body {
 
 .page {
   font-family: "Open Sans", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 1.3;
   display: flex;
   justify-content: space-between;
@@ -115,7 +115,7 @@ body {
     transition: opacity 0.5s;
 
     .display & {
-      opacity: 0.8;
+      opacity: 1;
     }
   }
 
@@ -179,19 +179,6 @@ body {
   }
 }
 
-.description,
-.info {
-  padding: 60px;
-
-  @media (max-width: 767px) {
-    padding: 30px;
-  }
-
-  @media (max-width: 450px) {
-    padding: 15px;
-  }
-}
-
 .icons {
   display: flex;
   justify-content: flex-end;
@@ -211,9 +198,18 @@ body {
   grid-gap: 30px;
   grid-template-columns: 700px 1fr;
   align-items: flex-start;
+  padding: 60px;
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr auto;
+  }
+
+  @media (max-width: 767px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 450px) {
+    padding: 15px;
   }
 }
 
@@ -246,13 +242,17 @@ body {
 }
 
 .description {
-  width: 800px;
+  width: 1000px;
   box-sizing: border-box;
-  max-width: 100vw;
-  font-weight: 300;
+  max-width: calc(100vw - 60px);
+  font-weight: 400;
   letter-spacing: 0.5px;
-
+  background: rgba(0, 0, 0, 0.6);
+  margin: 30px;
+  border: 4px double rgba(255, 255, 255, 0.2);
+  outline: 15px solid rgba(0, 0, 0, 0.6);
   transform: translateY(100%);
+  padding: 15px;
 
   .display & {
     transform: translateY(0%);
