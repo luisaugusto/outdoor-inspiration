@@ -198,7 +198,7 @@ body {
   grid-gap: 30px;
   grid-template-columns: 700px 1fr;
   align-items: flex-start;
-  padding: 60px;
+  padding: 30px 60px;
 
   @media (max-width: 991px) {
     grid-template-columns: 1fr auto;

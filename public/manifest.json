@@ -1,7 +1,7 @@
 {
   "name": "Outdoor Inspiration",
   "description": "A Chrome tab extension that displays pictures and descriptions of US National Parks",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "content_security_policy": "script-src 'self' https://kit.fontawesome.com",
   "chrome_url_overrides" : {
     "newtab": "index.html"
