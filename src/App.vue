@@ -27,7 +27,7 @@
 <script>
 export default {
   data: () => ({
-    delayRequests: true, //Set to true if you want to limit requests to Flickr to 1 per 5 minutes
+    delayRequests: false, //Set to true if you want to limit requests to Flickr to 1 per 5 minutes
     imgLoaded: false
   }),
   computed: {
