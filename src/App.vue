@@ -27,7 +27,7 @@
 <script>
 export default {
   data: () => ({
-    delayRequests: false, //Set to true if you want to limit requests to Flickr to 1 per 5 minutes
+    delayRequests: true, //Set to true if you want to limit requests to Flickr to 1 per minute
     imgLoaded: false
   }),
   computed: {
@@ -54,10 +54,7 @@ export default {
 
     this.$store.dispatch("getParks").then(() => {
       const parkExp = localStorage.getItem("parkExp");
-      if (
-        this.delayRequests &&
-        Date.now() < parseInt(parkExp) + 1000 * 60 * 5
-      ) {
+      if (this.delayRequests && Date.now() < parseInt(parkExp) + 1000 * 60) {
         const parkStorage = localStorage.getItem("park");
         this.$store.commit("setPark", JSON.parse(parkStorage));
       } else {
