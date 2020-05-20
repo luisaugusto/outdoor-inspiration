@@ -11,7 +11,7 @@
 
 # ⛰ Outdoor Inspiration
 
-A new tab extension that displays photos and descriptions of US National Parks
+A new tab extension that displays photos and descriptions of US National Parks.
 
 **Add It to Your Favorite Browser**
 | Chrome | Firefox | 
