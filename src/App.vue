@@ -12,8 +12,8 @@
         <div class="location">{{ park.location }}</div>
       </section>
       <div class="icons">
-        <a :href="park['nps-url']"><i class="fas fa-map-marked-alt"></i></a>
-        <a :href="flickrUrl"><i class="fab fa-flickr"></i></a>
+        <a :href="park['nps-url']"><font-awesome-icon icon="map-marked"/></a>
+        <a :href="flickrUrl"><font-awesome-icon :icon="['fab', 'flickr']"/></a>
       </div>
     </div>
     <section class="description">

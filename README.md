@@ -2,7 +2,9 @@
 
 A new tab extension that displays photos and descriptions of US National Parks
 
-[Download for Google Chrome](https://chrome.google.com/webstore/detail/mjgkcdcikkpendiikknkdhanooeiohee/)
+| Chrome | Firefox |
+| --- | --- |
+| [Download](https://chrome.google.com/webstore/detail/mjgkcdcikkpendiikknkdhanooeiohee/) | [Download](https://addons.mozilla.org/en-US/firefox/addon/outdoor-inspiration/) |
 
 > The page can also be previewed [here](https://outdoor-inspiration.netlify.app/) as well as run locally.
 
@@ -34,17 +36,19 @@ Compiles and hot-reloads for development:
 npm run serve
 ```
 
-Compiles and minifies for production: 
-
-```
-npm run build
-```
-
 Lints and fixes files:
 
 ```
 npm run lint
 ```
+
+## Building the Extensions
+
+You can use `npm run build` to build the Vue app, and after that you will need to zip the files in the `dist` directory. Don't just compress the `dist` directory, select all the files and compress those together. Compressing the `dist` directory directly may add a level of directories, and it might not be read correctly by the browsers.
+
+For Firefox, you can upload a build locally by navigating to [about:debugging](about:debugging), and load a temporary add-on from there. You can find more instructions [here](https://extensionworkshop.com/documentation/develop/temporary-installation-in-firefox/).
+
+For Chrome, you can load an extension by going to [chrome://extensions/](chrome://extensions/) with developer mode enabled. You can find more instructions [here](https://developer.chrome.com/extensions/getstarted).
 
 ## Contributing
 
