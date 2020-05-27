@@ -1,21 +1,28 @@
-# Outdoor Inspiration
+[![Netlify Status](https://api.netlify.com/api/v1/badges/19780833-4df2-4e2d-acc1-6fcb6b21ce97/deploy-status)](https://app.netlify.com/sites/outdoor-inspiration/deploys)
 
-A new tab extension that displays photos and descriptions of US National Parks
-
-| Chrome | Firefox |
-| --- | --- |
-| [Download](https://chrome.google.com/webstore/detail/mjgkcdcikkpendiikknkdhanooeiohee/) | [Download](https://addons.mozilla.org/en-US/firefox/addon/outdoor-inspiration/) |
-
-> The page can also be previewed [here](https://outdoor-inspiration.netlify.app/) as well as run locally.
-
-![](screenshot.jpg)
-
-Photos from the application are fetched from my galleries in [Flickr](https://www.flickr.com/photos/188326816@N04/galleries), and information about the park is pulled from the [NPS website](https://www.nps.gov/index.htm).
+![GitHub package.json version](https://img.shields.io/github/package-json/v/luisaugusto/outdoor-inspiration)
+![GitHub repo size](https://img.shields.io/github/repo-size/luisaugusto/outdoor-inspiration)
+![GitHub](https://img.shields.io/github/license/luisaugusto/outdoor-inspiration) 
 
 ###### Please consider supporting my work and other projects:
 
 [![Plant a Tree](https://img.shields.io/badge/Plant%20a%20Tree-%F0%9F%8C%B3-green)](https://offset.earth/luisaugusto)
 [![Buy Me a Boba Tea](https://img.shields.io/badge/Buy%20Me%20a%20Boba%20Tea-🥤-yellow)](https://www.buymeacoffee.com/luiscodes)
+
+# ⛰ Outdoor Inspiration
+
+A new tab extension that displays photos and descriptions of US National Parks.
+
+| Chrome | Firefox |
+| --- | --- |
+| [Download](https://chrome.google.com/webstore/detail/mjgkcdcikkpendiikknkdhanooeiohee/) | [Download](https://addons.mozilla.org/en-US/firefox/addon/outdoor-inspiration/) |
+
+
+> The app can also be previewed as a static site [here](https://outdoor-inspiration.netlify.app/) as well as run locally.
+
+![](screenshot.jpg)
+
+Photos from the application are fetched from my galleries in [Flickr](https://www.flickr.com/photos/188326816@N04/galleries), and information about the park is pulled from the [NPS website](https://www.nps.gov/index.htm).
 
 ## Installation
 
