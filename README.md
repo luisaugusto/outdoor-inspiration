@@ -1,8 +1,8 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/19780833-4df2-4e2d-acc1-6fcb6b21ce97/deploy-status)](https://app.netlify.com/sites/outdoor-inspiration/deploys)
 
 ![GitHub package.json version](https://img.shields.io/github/package-json/v/luisaugusto/outdoor-inspiration/main)
-![GitHub repo size](https://img.shields.io/github/repo-size/luisaugusto/outdoor-inspiration/main)
-![GitHub](https://img.shields.io/github/license/luisaugusto/outdoor-inspiration/main) 
+![GitHub repo size](https://img.shields.io/github/repo-size/luisaugusto/outdoor-inspiration)
+![GitHub](https://img.shields.io/github/license/luisaugusto/outdoor-inspiration) 
 
 ###### Please consider supporting my work and other projects:
 
