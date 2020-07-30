@@ -1,12 +1,12 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/19780833-4df2-4e2d-acc1-6fcb6b21ce97/deploy-status)](https://app.netlify.com/sites/outdoor-inspiration/deploys)
 
-![GitHub package.json version](https://img.shields.io/github/package-json/v/luisaugusto/outdoor-inspiration)
+![GitHub package.json version](https://img.shields.io/github/package-json/v/luisaugusto/outdoor-inspiration/main)
 ![GitHub repo size](https://img.shields.io/github/repo-size/luisaugusto/outdoor-inspiration)
 ![GitHub](https://img.shields.io/github/license/luisaugusto/outdoor-inspiration) 
 
 ###### Please consider supporting my work and other projects:
 
-[![Plant a Tree](https://img.shields.io/badge/Plant%20a%20Tree-%F0%9F%8C%B3-green)](https://offset.earth/luisaugusto)
+[![Plant a Tree](https://img.shields.io/badge/Plant%20a%20Tree-%F0%9F%8C%B3-green)](https://ecologi.com/luisaugusto)
 [![Buy Me a Boba Tea](https://img.shields.io/badge/Buy%20Me%20a%20Boba%20Tea-🥤-yellow)](https://www.buymeacoffee.com/luiscodes)
 
 # ⛰ Outdoor Inspiration
